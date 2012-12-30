@@ -151,6 +151,12 @@ a:hover {
   margin-left: -20px;
   *zoom: 1;
 }
+.row-padding
+{
+  padding-top: 50px;
+  margin-left: -20px;
+  *zoom: 1;
+}
 .row:before,
 .row:after {
   display: table;

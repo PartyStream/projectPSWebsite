@@ -686,6 +686,15 @@ ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
+ul.inline, ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+ul.inline > li, ol.inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
 dl {
   margin-bottom: 18px;
 }
@@ -6034,4 +6043,20 @@ body {
   font-size: 40px;
   font-weight: 200;
   line-height: 1.25;
+}
+.footer
+{
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid 
+  #e5e5e5;
+  background-color: 
+  #f5f5f5;
+}
+.footer p 
+{
+  margin-bottom: 0;
+  color: 
+  #777;
 }

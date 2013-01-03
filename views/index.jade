@@ -37,7 +37,7 @@
               .span4
                 p 
                   h1 Invite
-                p.lead Invite different people to seperate occasions to keep events segregated. Only people invited to the event can see images in that event
+                p.lead Invite different people to separate occasions to keep events segregated. Only people invited to the event can see images in that event
           .row-padding
             .row
               .span4
@@ -48,15 +48,42 @@
                 p 
                   h1 View
                 p.lead See all the pictures that are taken from all members of the party in real time! Never have to ask a friend or family member to send you pictures again – you'll already have them!
-  .row-padding
-    .row
-      .span12
-        p 
-          h1 Party Stream is currently in development. 
-        p We are a small team working endlessly on this app and are working realy hard to get it out as soon as possible. We have a Beta program that will allow a select few people the chance to try and test our app before it is released to the app store.
+    
+    .hero-unit
+      h1 Beta Program
       .row
-        .span5.offset5
-          a.btn.btn-primary.btn-large(href="#") Register for Beta
+        .span6
+          p We are a small team working endlessly on this app and are working really hard to get it out as soon as possible. We will have a Beta program that will give a limited amount of people the chance to try our app before it is released to the public.
+        .span3
+          .row
+            .span4.offset1
+              p Please enter your email
+          .row
+            .span4.offset1
+              //- form(method="post",action="/register")
+              .input-append
+                input(class="span2",id="email",type="text",placeholder="email@something.com")
+                button(class="btn",id="button",type="submit") Register
+
+            //- a.btn.btn-primary.btn-large(href="#") Register for Beta
+
+script(type='text/javascript')
+  $("#button").click( function()
+     {
+        $.ajax({
+          type: 'POST',
+          async,false,
+          url: '/register',
+          data: $("$email").val,
+          success: function(response){
+            if(response == true)
+              alert("it Worked!");
+            else
+              alert("Error");
+          }
+        });
+     }
+  );
 
 .footer
   .container

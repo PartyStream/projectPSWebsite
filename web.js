@@ -43,6 +43,11 @@ express.compiler.compilers.less.compile = function(str, fn){
 
 app.get('/', routes.index);
 
+// Register
+app.post('/register', function (req,res){
+  routes.register(req.body.email,req.headers,res);
+});
+
 var port = process.env.PORT || 3000;
 
 app.listen(port, function(){

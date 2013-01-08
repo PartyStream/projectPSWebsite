@@ -17,12 +17,24 @@ exports.index = function(req, res){
 +   \param email   The email address
 +   \param response   The result to be returned
 **/
-function register(email,headers,response)
+function register(email,headers,response,client)
 {
-    // Send response to client
-    response.writeHead(200,{"Content-Type":"text/plain"});
-    // response.write("{response:true}");
-    response.end();
+  console.log('Register user:');
+  console.dir(email);
+  var query;
+
+  query = client.query({
+    name: 'register user',
+    text: "INSERT INTO registeredUsers(email, host,user-agent,date) values($1, $2,$3,current_timestamp)",
+    values: [email, header.host, header.user-agent]
+  });
+
+  query.on('error',function(err) { console.log('Unable to register user: '+ err); } );
+  
+  // Send response to client
+  response.writeHead(200,{"Content-Type":"text/plain"});
+  // response.write("Create User! ");
+  response.end();
     
 }// END function register
 exports.register = register;

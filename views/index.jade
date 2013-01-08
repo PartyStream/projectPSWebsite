@@ -20,7 +20,7 @@
         p.lead A free photo sharing app that allows you easily share photos with friends and family.
     .row
       center
-        a.btn.btn-primary.btn-large(href="#") Register for Beta
+        a.btn.btn-primary.btn-large(href="#register") Register for Beta
 .container
   .row-padding
     .row
@@ -48,7 +48,7 @@
                 p 
                   h1 View
                 p.lead See all the pictures that are taken from all members of the party in real time! Never have to ask a friend or family member to send you pictures again – you'll already have them!
-    
+    section#register
     .hero-unit
       h1 Beta Program
       .row
@@ -70,17 +70,18 @@
 script(type='text/javascript')
   $("#button").click( function()
      {
-        $.ajax({
+        var request = $.ajax({
           type: 'POST',
-          async,false,
-          url: '/register',
-          data: $("$email").val,
-          success: function(response){
-            if(response == true)
-              alert("it Worked!");
-            else
-              alert("Error");
-          }
+          async: false,
+          url: 'http://localhost:3000/register',
+          data: { email: $("#email").val()}
+        });
+        request.done(function(msg) {
+          alert("Thank you for your interest, you will be sent an email shortly with more information about our Beta program");
+        });
+         
+        request.fail(function(jqXHR, textStatus) {
+          alert( "Request failed: " + textStatus );
         });
      }
   );

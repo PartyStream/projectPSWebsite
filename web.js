@@ -4,12 +4,16 @@
  */
 
 var express = require('express'),
-routes = require('./routes');
+    pg     = require('pg').native,
+    client = new pg.Client(process.env.DATABASE_URL);
+    routes = require('./routes');
 
 var app = module.exports = express.createServer();
 
-// Configuration
+// Connect To DB
+client.connect();
 
+// Configuration
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
@@ -45,7 +49,7 @@ app.get('/', routes.index);
 
 // Register
 app.post('/register', function (req,res){
-  routes.register(req.body.email,req.headers,res);
+  routes.register(req.body.email,req.headers,res,client);
 });
 
 var port = process.env.PORT || 3000;

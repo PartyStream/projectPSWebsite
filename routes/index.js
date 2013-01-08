@@ -19,12 +19,9 @@ exports.index = function(req, res){
 **/
 function register(email,headers,response)
 {
-    console.log(email);
-    console.log(headers);
-
     // Send response to client
     response.writeHead(200,{"Content-Type":"text/plain"});
-    response.write("true");
+    // response.write("{response:true}");
     response.end();
     
 }// END function register

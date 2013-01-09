@@ -29,6 +29,7 @@
             <type><![CDATA[VARCHAR(45)]]></type>
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <uid><![CDATA[F6332BC1-BAF4-42F8-82F2-0EFD8B3CEB60]]></uid>
+            <unique><![CDATA[1]]></unique>
         </SQLField>
         <SQLField>
             <name><![CDATA[host]]></name>
@@ -37,7 +38,7 @@
             <uid><![CDATA[DA362872-1BEE-4ED1-85CC-3B320D371352]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[user-agent]]></name>
+            <name><![CDATA[user_agent]]></name>
             <type><![CDATA[TEXT]]></type>
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <uid><![CDATA[879FAF51-92CA-4566-A6A3-F8702CD929C1]]></uid>

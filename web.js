@@ -5,7 +5,7 @@
 
 var express = require('express'),
     pg     = require('pg').native,
-    client = new pg.Client(process.env.DATABASE_URL);
+    client = new pg.Client(process.env.DATABASE_URL),
     routes = require('./routes');
 
 var app = module.exports = express.createServer();
@@ -50,7 +50,7 @@ app.get('/index', routes.index);
 
 // Register
 app.post('/register', function (req,res){
-  routes.register(req.body.email,req.headers,res,client);
+  routes.register(req.body.email,req.headers,req.connection.remoteAddress,res,client);
 });
 
 var port = process.env.PORT || 3000;

@@ -46,6 +46,7 @@ express.compiler.compilers.less.compile = function(str, fn){
 // Routes
 
 app.get('/', routes.index);
+app.get('/index', routes.index);
 
 // Register
 app.post('/register', function (req,res){

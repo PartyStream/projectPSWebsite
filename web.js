@@ -41,7 +41,7 @@ express.compiler.compilers.less.compile = function(str, fn){
     var less = require('less');var parser = new less.Parser({paths: [TWITTER_BOOTSTRAP_PATH]});
     parser.parse(str, function(err, root){fn(err, root.toCSS());});
   } catch (err) {fn(err);}
-}
+};
 
 // Routes
 

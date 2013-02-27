@@ -6,14 +6,14 @@
 var express = require('express'),
     pg     = require('pg').native,
     pgUrl = process.env.DATABASE_URL,
-    // client = new pg.Client(process.env.DATABASE_URL),
-    client = pg.connect(pgUrl),
+    client = new pg.Client(process.env.DATABASE_URL),
+    // client = pg.connect(pgUrl),
     routes = require('./routes');
 
 var app = module.exports = express.createServer();
 
 // Connect To DB
-// client.connect();
+client.connect();
 
 // Configuration
 app.configure(function(){

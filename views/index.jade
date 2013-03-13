@@ -50,23 +50,28 @@
                 p.lead See pictures that are taken from all members of the party in real time! Never have to ask a friend or family member to send you pictures again – you'll already have them!
     .row-fluid
       .span12
-      section#register
-      .hero-unit#update
-        h1 Beta Program
-        .row-fluid
-          .span8
-            p We are a small team working endlessly on this app trying to get it out as soon as possible. Once ready, there will be a closed Beta program that will give first subscribers a chance to preview the app before it's released.
-          .span4
-            .row-fluid
-              .span11.offset1
-                p Please enter your email
-            .row-fluid
-              .span12
-                .input-append
-                  input(class="span8",id="email",type="text",placeholder="email@something.com")
-                  button(class="btn",id="button",type="submit") Register
-
-              //- a.btn.btn-primary.btn-large(href="#") Register for Beta
+        section#register
+        .hero-unit#update
+          h1 Beta Program
+          .row-fluid
+            .span8
+              p We are a small team working endlessly on this app trying to get it out as soon as possible. Once ready, there will be a closed Beta program that will give first subscribers a chance to preview the app before it's released. As it is a closed Beta, accounts will be limited. Be sure to signup before we run out of spots!
+            .span4
+              .row-fluid
+                .span11.offset1
+                  p Please enter your email
+              .row-fluid
+                .span12
+                  .input-append
+                    input(class="span8",id="email",type="text",placeholder="email@something.com")
+                    button(class="btn",id="button",type="submit") Register
+          .row-fluid
+            .span4
+              h2 Beta Signup Progress
+            .span8
+              p
+                .progress.progress-striped.active
+                  .bar(style="width: 35%;")
 
 script(type='text/javascript')
   $("#button").click( function()

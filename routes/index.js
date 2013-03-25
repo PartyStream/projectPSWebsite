@@ -7,6 +7,26 @@ exports.index = function(req, res){
   res.render('index', { title: 'Party Stream' });
 };
 
+/**
++  \brief googleVerification
++
++      This function will just send the google verification file
++
++  \author Salvatore D'Agostino
++  \date  2013-03-24 21:30
++  \param req  The request
++  \param res  The result to pass back to client
++
++  \return NA
+**/
+exports.googleVerification = function (req,res){
+  console.log('Google verification');
+  res.writeHead(200,{"Content-Type":"text/plain"});
+  res.write("google-site-verification: google572bca5588404eef.html");
+  res.end();
+
+};// END function googleVerification
+
 
 /**
 +   \brief register

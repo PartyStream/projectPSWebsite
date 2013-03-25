@@ -49,7 +49,10 @@ express.compiler.compilers.less.compile = function(str, fn){
 
 app.get('/', routes.index);
 app.get('/index', routes.index);
+app.get('/index*', routes.index);
 app.get('/google572bca5588404eef.html', routes.googleVerification);
+app.get('/sitemap',routes.siteMap);
+app.get('/sitemap*',routes.siteMap);
 
 // Register
 app.post('/register', function (req,res){

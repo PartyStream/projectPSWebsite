@@ -78,14 +78,33 @@ exports.siteMap = siteMap;
 +   \param ip         The remote IP of the client
 +   \param response   The result to be returned
 +   \param client     The DB client connection
++   \param mandrill   The Mandrill connection for email receipt
 **/
-function register(email,headers,ip,response,client)
+function register(email,headers,ip,response,client,mandrill)
 {
   console.log('Register user:');
   console.dir(email);
   console.dir(headers);
   var query;
+  var emailMessage = {
+    key: process.env.MANDRILL_APIKEY,
+    template_name:"WelcomeToPartyStream",
+    template_content: [{
+    }],
+    message: {
+      to: [{
+          "email": email,
+          "name": "New Party Stream Member"
+      }],
+      headers: {
+        "Reply-To":"partystreamapp@gmail.com"
+      },
+      track_opens: "true"
+    },
+    async: "true"
+  };
 
+    mandrill.messages.sendTemplate(emailMessage);
   query = client.query({
     name: 'register user',
     text: "INSERT INTO registeredUsers(email, host,user_agent,date) values($1, $2,$3,current_timestamp)",

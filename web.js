@@ -7,13 +7,19 @@ var express = require('express'),
     pg     = require('pg').native,
     pgUrl = process.env.DATABASE_URL,
     client = new pg.Client(process.env.DATABASE_URL),
-    // client = pg.connect(pgUrl),
     routes = require('./routes');
 
 var app = module.exports = express.createServer();
 
 // Connect To DB
 client.connect();
+
+//Mandrill
+var Mandrill = require('mandrill-api').Mandrill;
+var man = new Mandrill();
+man.users.info(function(info) {
+    console.log('Reputation: ' + info.reputation + ', Hourly Quota: ' + info.hourly_quota);
+});
 
 // Configuration
 app.configure(function(){
@@ -56,7 +62,7 @@ app.get('/sitemap*',routes.siteMap);
 
 // Register
 app.post('/register', function (req,res){
-  routes.register(req.body.email,req.headers,req.connection.remoteAddress,res,client);
+  routes.register(req.body.email,req.headers,req.connection.remoteAddress,res,client,man);
 });
 
 var port = process.env.PORT || 3000;

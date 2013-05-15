@@ -104,7 +104,6 @@ function register(email,headers,ip,response,client,mandrill)
     async: "true"
   };
 
-    mandrill.messages.sendTemplate(emailMessage);
   query = client.query({
     name: 'register user',
     text: "INSERT INTO registeredUsers(email, host,user_agent,date) values($1, $2,$3,current_timestamp)",
@@ -116,6 +115,7 @@ function register(email,headers,ip,response,client,mandrill)
   });
 
   query.on('end', function() {
+    mandrill.messages.sendTemplate(emailMessage);
     response.render('thankyou', { title: 'Party Stream'});
   });
 }// END function register

@@ -1,0 +1,6 @@
+.wrapper{
+    background-image: url("/images/v2.0/midnight_sky.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: 100%;
+}

@@ -4,3 +4,17 @@
     background-size: cover;
     height: 100%;
 }
+.top{
+    background-image: url("/images/v2.0/top-center-header.png");
+    background-repeat: no-repeat;
+    height: 320px;
+}
+.top #share{
+    float:  right;
+    text-align:     right;
+}
+.beigeBody{
+    background-color:   #e6ecde;
+    color: white;
+    height: 100%;
+}

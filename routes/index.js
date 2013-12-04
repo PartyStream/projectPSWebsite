@@ -7,6 +7,11 @@ exports.index = function(req, res){
   res.render('index', { title: 'Party Stream' });
 };
 
+exports.ship = function(req, res){
+  res.render('ship', { title: 'Party Stream' });
+};
+
+
 /**
 +  \brief googleVerification
 +

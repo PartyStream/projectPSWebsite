@@ -5,9 +5,12 @@
     height: 100%;
 }
 .top{
-    background-image: url("/images/v2.0/top-center-header.png");
-    background-repeat: no-repeat;
-    height: 320px;
+    /*background-image: url("/images/v2.0/top-center-header.png");
+    background-repeat: no-repeat;*/
+    height: 319px;
+}
+.top img{
+    z-index: -1;
 }
 .top #share{
     float:  right;
@@ -17,4 +20,23 @@
     background-color:   #e6ecde;
     color: white;
     height: 100%;
+    z-index: 1;
+}
+
+.water-color{
+    background-color: #1abc9c;
+}
+.div-center{
+    float: none;
+    margin: 0 auto;
+}
+
+#v_center{
+    margin-top:90px;
+}
+#waves{
+    position: relative;
+    z-index: 1;
+    margin-top: -35px;
+    width: inherit;
 }

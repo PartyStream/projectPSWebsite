@@ -40,3 +40,8 @@
     margin-top: -35px;
     width: inherit;
 }
+
+#feature_tile{
+    padding-top: 50px;
+    height: 200;
+}

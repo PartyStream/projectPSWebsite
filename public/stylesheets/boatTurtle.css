@@ -1,26 +1,42 @@
-.wrapper{
+body{
     background-image: url("/images/v2.0/midnight_sky.png");
-    background-repeat: repeat-y;
+    /*background-repeat: repeat-y;
     background-size: cover;
-    height: 100%;
+    height: 100%;*/
 }
 .top{
     /*background-image: url("/images/v2.0/top-center-header.png");
     background-repeat: no-repeat;*/
     height: 319px;
 }
+
+.top #logo{
+    position    : absolute;
+    padding-top : 65px;
+    padding-left: 15%;
+    display     : block;
+    z-index     : 2;
+}
+
 .top img{
     z-index: -1;
 }
 .top #share{
-    float:  right;
-    text-align:     right;
+    float      : right;
+    text-align : right;
+    z-index    : 1;
 }
 .beigeBody{
     background-color:   #e6ecde;
     color: white;
     height: 100%;
     z-index: 1;
+}
+
+.beigeBody #sign_up{
+    /*background-image: url("/images/v2.0/beta-program.png");*/
+    height: 264px;
+
 }
 
 .water-color{

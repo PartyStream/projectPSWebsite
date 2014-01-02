@@ -1,14 +1,14 @@
 {
     "name": "projectpswebsite"
-  , "version": "0.0.1"
+  , "version": "0.1.0"
   , "private": true
   , "engines": {
-      "node": "0.8.x",
-      "npm": "1.1.x"
+      "node": "0.10.26",
+      "npm": "1.3.5"
     }
   , "dependencies": {
-    "express": "2.5.8"
-    , "pg"          : "latest"
+    "express": "3.2.6"
+    , "pg"          : "2.10.x"
     , "less"        : ">= 0.0.1"
     , "jade"        : ">= 0.0.1"
     , "mandrill-api":"latest"

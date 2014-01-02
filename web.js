@@ -54,6 +54,7 @@ express.compiler.compilers.less.compile = function(str, fn){
 // Routes
 
 app.get('/', routes.index);
+app.get('/beta',routes.ship);
 app.get('/index', routes.index);
 app.get('/index*', routes.index);
 app.get('/google572bca5588404eef.html', routes.googleVerification);
@@ -70,3 +71,4 @@ var port = process.env.PORT || 3000;
 app.listen(port, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
+module.exports = app;

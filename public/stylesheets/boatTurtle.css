@@ -1,0 +1,77 @@
+body{
+    background-image: url("/images/v2.0/midnight_sky.png");
+    /*background-repeat: repeat-y;
+    background-size: cover;
+    height: 100%;*/
+}
+.top{
+    height: 319px;
+}
+
+.top #logo{
+    position    : absolute;
+    padding-top : 65px;
+    padding-left: 15%;
+    display     : block;
+}
+.top #share{
+    position: relative;
+    float      : right;
+    text-align : right;
+}
+.top #share img{
+    height: 50px;
+}
+.beigeBody{
+    background-color:   #e6ecde;
+    color: white;
+    height: 100%;
+    z-index: 1;
+}
+
+.beigeBody #sign_up{
+    /*background-image: url("/images/v2.0/beta-program.png");*/
+
+}
+
+.water-color{
+    background-color: #1abc9c;
+}
+.div-center{
+    float: none;
+    margin: 0 auto;
+}
+
+#v_center{
+    margin-top:90px;
+}
+#waves{
+    position: relative;
+    z-index: 1;
+    margin-top: -35px;
+    width: inherit;
+}
+
+#feature_tile{
+    padding-top: 50px;
+    height: 200;
+}
+
+#turtle{
+    margin-top: 50px;
+}
+
+.email-signup{
+    background-image: url("/images/v2.0/email-signup.png");
+    height:80px;
+    margin-top: -25px;
+    color: #e6ecde;
+}
+
+.email-signup #email_form{
+    padding-top: 30px;
+}
+
+#update{
+    color: #e74c3c;
+}

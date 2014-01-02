@@ -1,6 +1,6 @@
 var request = require('supertest');
 var assert  = require('assert');
-var app     = require('web.js');
+var app     = require('../web.js');
 var should  = require('should');
 
 describe('Get /', function(){

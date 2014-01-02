@@ -1,16 +1,23 @@
 {
     "name": "projectpswebsite"
-  , "version": "0.0.1"
+  , "version": "0.1.0"
   , "private": true
   , "engines": {
-      "node": "0.8.x",
-      "npm": "1.1.x"
+      "node": "0.10.26",
+      "npm": "1.3.5"
     }
   , "dependencies": {
     "express": "2.5.8"
-    , "pg"          : "latest"
-    , "less"        : ">= 0.0.1"
-    , "jade"        : ">= 0.0.1"
-    , "mandrill-api":"latest"
+    , "pg"           : "2.10.x"
+    , "less"         : ">= 0.0.1"
+    , "jade"         : "0.35.x"
+    , "mandrill-api" :"latest"
+    , "mocha"        : "1.1.x"
+    , "should"       : "1.2.2"
+    , "chai"         : "*"
+    , "supertest"    : "0.7.x"
+  },
+  "scripts": {
+    "test" : "mocha"
   }
 }

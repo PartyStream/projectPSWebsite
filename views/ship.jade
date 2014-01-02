@@ -5,7 +5,8 @@
         #logo
             img(src="/images/v2.0/Party-Stream-Header.png",width="80%");
         #share
-          img(src="/images/v2.0/twitter-share.png",width="40%")
+          a(href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fplatform.twitter.com%2Fwidgets%2Ffollow_button.1363148939.html&region=follow_link&screen_name=PartyStreamApp&tw_p=followbutton&variant=2.0"): img(src="/images/v2.0/twitter-share.png",width="40%")
+
         img(src="/images/v2.0/top-center-header.png")
         .row-fluid.water-color
           .row-fluid#waves
@@ -32,9 +33,42 @@
           .row-fluid.beigeBody
             .span1
             .span10
-              .row-fluid
-                 span10#sign_up
+              .row-fluid#update
+                 .span12#sign_up
                     img(src="/images/v2.0/beta-program.png")
+                  .row-fluid
+                    .span12.email-signup
+                      .span6
+                      .span6#email_form
+                        .form-inline
+                          label(class="control-label", for="email")
+                            | Sign Up Here
+                          input(name="email",id="email",type="text",placeholder="email@something.com")
+                          button(class="btn",id="button",type="submit") Register
               .row-fluid
-                .span10#turtle
+                .span6#turtle
                   img(src="/images/v2.0/latest-greatest.png");
+                .span6#turtle
+                  |<a class="twitter-timeline" href="https://twitter.com/PartyStreamApp" data-widget-id="311979120512860162">Tweets by @PartyStreamApp</a>
+                  |<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+script(type='text/javascript')
+  $("#button").click( function()
+     {
+        var emailAddress = $("#email").val();
+
+        var request = $.ajax({
+          type: 'POST',
+          async: false,
+          url: '/register',
+          data: { email: emailAddress}
+        });
+        request.done(function(msg) {
+          $("#update").html(msg);
+        });
+
+        request.fail(function(jqXHR, textStatus) {
+          alert( "Request failed: " + textStatus );
+        });
+     }
+  );

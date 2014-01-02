@@ -35,7 +35,6 @@ body{
 
 .beigeBody #sign_up{
     /*background-image: url("/images/v2.0/beta-program.png");*/
-    height: 264px;
 
 }
 
@@ -64,4 +63,19 @@ body{
 
 #turtle{
     margin-top: 50px;
+}
+
+.email-signup{
+    background-image: url("/images/v2.0/email-signup.png");
+    height:80px;
+    margin-top: -25px;
+    color: #e6ecde;
+}
+
+.email-signup #email_form{
+    padding-top: 30px;
+}
+
+#update{
+    color: #e74c3c;
 }

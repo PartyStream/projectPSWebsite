@@ -11,8 +11,12 @@ var express = require('express'),
 
 var app = module.exports = express.createServer();
 
+console.log("Server Created");
+
 // Connect To DB
 client.connect();
+
+console.log("Connected To Database");
 
 //Mandrill
 var Mandrill = require('mandrill-api').Mandrill;
@@ -20,6 +24,8 @@ var man = new Mandrill();
 man.users.info(function(info) {
     console.log('Reputation: ' + info.reputation + ', Hourly Quota: ' + info.hourly_quota);
 });
+
+console.log("Mandrill Object Created");
 
 // Configuration
 app.configure(function(){
@@ -31,6 +37,8 @@ app.use(express.compiler({ src : __dirname + '/public', enable: ['less']}));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
+
+console.log("Express using Jade and Less");
 
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));

@@ -24,7 +24,6 @@ body{
 .top #share{
     float      : right;
     text-align : right;
-    z-index    : 1;
 }
 .beigeBody{
     background-color:   #e6ecde;

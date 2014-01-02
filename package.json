@@ -8,9 +8,16 @@
     }
   , "dependencies": {
     "express": "2.5.8"
-    , "pg"          : "2.10.x"
-    , "less"        : ">= 0.0.1"
-    , "jade"        : "0.35.x"
-    , "mandrill-api":"latest"
+    , "pg"           : "2.10.x"
+    , "less"         : ">= 0.0.1"
+    , "jade"         : "0.35.x"
+    , "mandrill-api" :"latest"
+    , "mocha"        : "1.1.x"
+    , "should"       : "1.2.2"
+    , "chai"         : "*"
+    , "supertest"    : "0.7.x"
+  },
+  "scripts": {
+    "test" : "mocha"
   }
 }

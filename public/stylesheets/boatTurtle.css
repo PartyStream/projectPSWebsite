@@ -1,5 +1,5 @@
 body{
-    background-image: url("/images/v2.0/midnight_sky.png");
+    background-image: url("/images/midnight_sky.png");
     /*background-repeat: repeat-y;
     background-size: cover;
     height: 100%;*/
@@ -30,7 +30,7 @@ body{
 }
 
 .beigeBody #sign_up{
-    /*background-image: url("/images/v2.0/beta-program.png");*/
+    /*background-image: url("/images/beta-program.png");*/
 
 }
 
@@ -62,7 +62,7 @@ body{
 }
 
 .email-signup{
-    background-image: url("/images/v2.0/email-signup.png");
+    background-image: url("/images/email-signup.png");
     height:80px;
     margin-top: -25px;
     color: #e6ecde;
